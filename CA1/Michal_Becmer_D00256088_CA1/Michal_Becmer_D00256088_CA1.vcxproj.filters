@@ -36,17 +36,11 @@
     <Filter Include="Source Files\core">
       <UniqueIdentifier>{c7e4a6f1-41e2-4df0-b31e-ec5e2cf04373}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\states">
-      <UniqueIdentifier>{f96621eb-e05c-4e7c-a447-66f56256c0e9}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\utils">
       <UniqueIdentifier>{9531a3a0-77d9-48cf-bcd6-cb3f54d9eee3}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\network">
       <UniqueIdentifier>{c104c4e5-48e0-4126-af75-187403253d36}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\gameplay">
-      <UniqueIdentifier>{7a000b58-a01b-419a-bbbd-c4e2371988ef}</UniqueIdentifier>
     </Filter>
     <Filter Include="headers\core">
       <UniqueIdentifier>{3545a936-5469-4d0e-be84-a80d8846f308}</UniqueIdentifier>
@@ -63,10 +57,150 @@
     <Filter Include="headers\states">
       <UniqueIdentifier>{990a5822-8c86-46a3-a082-5eeebb68a044}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\states">
+      <UniqueIdentifier>{7a000b58-a01b-419a-bbbd-c4e2371988ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gameplay">
+      <UniqueIdentifier>{f96621eb-e05c-4e7c-a447-66f56256c0e9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\core\game_state_manager.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\application.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\input_manager.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\resource_manager.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\physics_engine.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\audio_manager.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\shader_manager.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\states\title_state.cpp">
+      <Filter>Source Files\states</Filter>
+    </ClCompile>
+    <ClCompile Include="src\states\menu_state.cpp">
+      <Filter>Source Files\states</Filter>
+    </ClCompile>
+    <ClCompile Include="src\states\game_state.cpp">
+      <Filter>Source Files\states</Filter>
+    </ClCompile>
+    <ClCompile Include="src\states\pause_state.cpp">
+      <Filter>Source Files\states</Filter>
+    </ClCompile>
+    <ClCompile Include="src\states\game_over_state.cpp">
+      <Filter>Source Files\states</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\timer.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\math.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\logger.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameplay\bullet.cpp">
+      <Filter>Source Files\gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameplay\camera.cpp">
+      <Filter>Source Files\gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameplay\hud.cpp">
+      <Filter>Source Files\gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameplay\map.cpp">
+      <Filter>Source Files\gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameplay\player.cpp">
+      <Filter>Source Files\gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameplay\power_up.cpp">
+      <Filter>Source Files\gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameplay\weapon.cpp">
+      <Filter>Source Files\gameplay</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="headers\core\application.hpp">
+      <Filter>headers\core</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\core\game_state_manager.hpp">
+      <Filter>headers\core</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\core\input_manager.hpp">
+      <Filter>headers\core</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\core\resource_manager.hpp">
+      <Filter>headers\core</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\core\physics_engine.hpp">
+      <Filter>headers\core</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\core\audio_manager.hpp">
+      <Filter>headers\core</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\core\shader_manager.hpp">
+      <Filter>headers\core</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\gameplay\player.hpp">
+      <Filter>headers\gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\gameplay\weapon.hpp">
+      <Filter>headers\gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\gameplay\bullet.hpp">
+      <Filter>headers\gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\gameplay\power_up.hpp">
+      <Filter>headers\gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\gameplay\map.hpp">
+      <Filter>headers\gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\gameplay\camera.hpp">
+      <Filter>headers\gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\gameplay\hud.hpp">
+      <Filter>headers\gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\states\title_state.hpp">
+      <Filter>headers\states</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\states\menu_state.hpp">
+      <Filter>headers\states</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\states\game_state.hpp">
+      <Filter>headers\states</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\states\pause_state.hpp">
+      <Filter>headers\states</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\states\game_over_state.hpp">
+      <Filter>headers\states</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\utils\timer.hpp">
+      <Filter>headers\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\utils\math.hpp">
+      <Filter>headers\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\utils\logger.hpp">
+      <Filter>headers\utils</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

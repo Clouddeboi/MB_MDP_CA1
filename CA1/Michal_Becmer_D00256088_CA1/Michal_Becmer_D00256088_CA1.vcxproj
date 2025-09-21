@@ -19,7 +19,53 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\core\application.cpp" />
+    <ClCompile Include="src\core\audio_manager.cpp" />
+    <ClCompile Include="src\core\game_state_manager.cpp" />
+    <ClCompile Include="src\core\input_manager.cpp" />
+    <ClCompile Include="src\core\physics_engine.cpp" />
+    <ClCompile Include="src\core\resource_manager.cpp" />
+    <ClCompile Include="src\core\shader_manager.cpp" />
+    <ClCompile Include="src\gameplay\bullet.cpp" />
+    <ClCompile Include="src\gameplay\camera.cpp" />
+    <ClCompile Include="src\gameplay\hud.cpp" />
+    <ClCompile Include="src\gameplay\map.cpp" />
+    <ClCompile Include="src\gameplay\player.cpp" />
+    <ClCompile Include="src\gameplay\power_up.cpp" />
+    <ClCompile Include="src\gameplay\weapon.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\states\game_over_state.cpp" />
+    <ClCompile Include="src\states\game_state.cpp" />
+    <ClCompile Include="src\states\menu_state.cpp" />
+    <ClCompile Include="src\states\pause_state.cpp" />
+    <ClCompile Include="src\states\title_state.cpp" />
+    <ClCompile Include="src\utils\logger.cpp" />
+    <ClCompile Include="src\utils\math.cpp" />
+    <ClCompile Include="src\utils\timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="headers\core\application.hpp" />
+    <ClInclude Include="headers\core\audio_manager.hpp" />
+    <ClInclude Include="headers\core\game_state_manager.hpp" />
+    <ClInclude Include="headers\core\input_manager.hpp" />
+    <ClInclude Include="headers\core\physics_engine.hpp" />
+    <ClInclude Include="headers\core\resource_manager.hpp" />
+    <ClInclude Include="headers\core\shader_manager.hpp" />
+    <ClInclude Include="headers\gameplay\bullet.hpp" />
+    <ClInclude Include="headers\gameplay\camera.hpp" />
+    <ClInclude Include="headers\gameplay\hud.hpp" />
+    <ClInclude Include="headers\gameplay\map.hpp" />
+    <ClInclude Include="headers\gameplay\player.hpp" />
+    <ClInclude Include="headers\gameplay\power_up.hpp" />
+    <ClInclude Include="headers\gameplay\weapon.hpp" />
+    <ClInclude Include="headers\states\game_over_state.hpp" />
+    <ClInclude Include="headers\states\game_state.hpp" />
+    <ClInclude Include="headers\states\menu_state.hpp" />
+    <ClInclude Include="headers\states\pause_state.hpp" />
+    <ClInclude Include="headers\states\title_state.hpp" />
+    <ClInclude Include="headers\utils\logger.hpp" />
+    <ClInclude Include="headers\utils\math.hpp" />
+    <ClInclude Include="headers\utils\timer.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
