@@ -5,17 +5,67 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
+    <Filter Include="assets">
+      <UniqueIdentifier>{52aa4ea6-c053-4faa-a44b-6b8ac3f270e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="headers">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="bin">
+      <UniqueIdentifier>{bdd68812-35d8-40c2-9440-a3816b2a914c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\audio">
+      <UniqueIdentifier>{8614fd31-ed00-49ac-91eb-960ab4cc417e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\audio\sfx">
+      <UniqueIdentifier>{8bce0a1a-54b3-41b1-8d86-6b4427b1bb3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\audio\music">
+      <UniqueIdentifier>{4b78ef20-ecc4-486e-b329-fb1d515761ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\fonts">
+      <UniqueIdentifier>{20e11d95-cef1-42a8-9289-cd62f3c27080}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\shaders">
+      <UniqueIdentifier>{56c06fe7-285d-41e1-b509-eac2d067fe82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\sprites">
+      <UniqueIdentifier>{41aa8a4b-e41f-414c-b307-0ffa6bb2d18d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core">
+      <UniqueIdentifier>{c7e4a6f1-41e2-4df0-b31e-ec5e2cf04373}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\states">
+      <UniqueIdentifier>{f96621eb-e05c-4e7c-a447-66f56256c0e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils">
+      <UniqueIdentifier>{9531a3a0-77d9-48cf-bcd6-cb3f54d9eee3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\network">
+      <UniqueIdentifier>{c104c4e5-48e0-4126-af75-187403253d36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gameplay">
+      <UniqueIdentifier>{7a000b58-a01b-419a-bbbd-c4e2371988ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="headers\core">
+      <UniqueIdentifier>{3545a936-5469-4d0e-be84-a80d8846f308}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="headers\network">
+      <UniqueIdentifier>{2157ca97-1bbc-4853-829b-f716e3f128c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="headers\gameplay">
+      <UniqueIdentifier>{f60cc28e-c8de-477b-8cc9-38f3ba750364}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="headers\utils">
+      <UniqueIdentifier>{8d39b9f0-d643-4b46-b5a9-2ff8fb0e4d48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="headers\states">
+      <UniqueIdentifier>{990a5822-8c86-46a3-a082-5eeebb68a044}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Michal_Becmer_D00256088_CA1.cpp">
+    <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
