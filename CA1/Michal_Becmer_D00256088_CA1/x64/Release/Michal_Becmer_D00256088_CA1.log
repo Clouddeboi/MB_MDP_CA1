@@ -1,0 +1,53 @@
+﻿  Michal_Becmer_D00256088_CA1.cpp
+C:\Users\Michal\Desktop\MDPCollege\CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1.cpp(6,42): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::VideoMode'
+      C:\Users\Michal\Desktop\MDPCollege\CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1.cpp(6,42):
+      'sf::VideoMode::VideoMode': no overloaded function could convert all the argument types
+          C:\Libraries\SFML-3.0.2\include\SFML\Window\VideoMode.hpp(61,5):
+          could be 'sf::VideoMode::VideoMode(sf::Vector2u,unsigned int)'
+              C:\Users\Michal\Desktop\MDPCollege\CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1.cpp(6,42):
+              'sf::VideoMode::VideoMode(sf::Vector2u,unsigned int)': cannot convert argument 1 from 'int' to 'sf::Vector2u'
+                  C:\Users\Michal\Desktop\MDPCollege\CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1.cpp(6,44):
+                  'sf::Vector2<unsigned int>::Vector2': no overloaded function could convert all the argument types
+                      C:\Libraries\SFML-3.0.2\include\SFML\System\Vector2.hpp(205,1):
+                      could be 'sf::Vector2<unsigned int>::Vector2(sf::Vector2<unsigned int> &&)'
+                          C:\Users\Michal\Desktop\MDPCollege\CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1.cpp(6,44):
+                          'sf::Vector2<unsigned int>::Vector2(sf::Vector2<unsigned int> &&)': cannot convert argument 1 from 'int' to 'sf::Vector2<unsigned int> &&'
+                              C:\Users\Michal\Desktop\MDPCollege\CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1.cpp(6,44):
+                              Reason: cannot convert from 'int' to 'sf::Vector2<unsigned int>'
+                              C:\Users\Michal\Desktop\MDPCollege\CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1.cpp(6,44):
+                              Conversion requires a second user-defined-conversion operator or constructor
+                      C:\Libraries\SFML-3.0.2\include\SFML\System\Vector2.hpp(205,1):
+                      or       'sf::Vector2<unsigned int>::Vector2(const sf::Vector2<unsigned int> &)'
+                          C:\Users\Michal\Desktop\MDPCollege\CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1.cpp(6,44):
+                          'sf::Vector2<unsigned int>::Vector2(const sf::Vector2<unsigned int> &)': cannot convert argument 1 from 'int' to 'const sf::Vector2<unsigned int> &'
+                              C:\Users\Michal\Desktop\MDPCollege\CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1.cpp(6,44):
+                              Reason: cannot convert from 'int' to 'const sf::Vector2<unsigned int>'
+                              C:\Users\Michal\Desktop\MDPCollege\CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1.cpp(6,44):
+                              Conversion requires a second user-defined-conversion operator or constructor
+                      C:\Users\Michal\Desktop\MDPCollege\CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1.cpp(6,44):
+                      while trying to match the argument list '(int)'
+          C:\Users\Michal\Desktop\MDPCollege\CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1.cpp(6,42):
+          while trying to match the argument list '(int, int)'
+  
+C:\Users\Michal\Desktop\MDPCollege\CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1.cpp(6,28): error C2665: 'sf::RenderWindow::RenderWindow': no overloaded function could convert all the argument types
+      C:\Libraries\SFML-3.0.2\include\SFML\Graphics\RenderWindow.hpp(206,1):
+      could be 'sf::RenderWindow::RenderWindow(sf::RenderWindow &&)'
+          C:\Users\Michal\Desktop\MDPCollege\CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1.cpp(6,28):
+          'sf::RenderWindow::RenderWindow(sf::RenderWindow &&)': cannot convert argument 1 from 'const char [12]' to 'sf::RenderWindow &&'
+              C:\Users\Michal\Desktop\MDPCollege\CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1.cpp(6,56):
+              Reason: cannot convert from 'const char [12]' to 'sf::RenderWindow'
+      C:\Libraries\SFML-3.0.2\include\SFML\Graphics\RenderWindow.hpp(206,1):
+      or       'sf::RenderWindow::RenderWindow(const sf::RenderWindow &)'
+          C:\Users\Michal\Desktop\MDPCollege\CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1.cpp(6,28):
+          'sf::RenderWindow::RenderWindow(const sf::RenderWindow &)': cannot convert argument 1 from 'const char [12]' to 'const sf::RenderWindow &'
+              C:\Users\Michal\Desktop\MDPCollege\CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1.cpp(6,56):
+              Reason: cannot convert from 'const char [12]' to 'const sf::RenderWindow'
+      C:\Libraries\SFML-3.0.2\include\SFML\Graphics\RenderWindow.hpp(127,5):
+      or       'sf::RenderWindow::RenderWindow(sf::WindowHandle,const sf::ContextSettings &)'
+          C:\Users\Michal\Desktop\MDPCollege\CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1.cpp(6,28):
+          'sf::RenderWindow::RenderWindow(sf::WindowHandle,const sf::ContextSettings &)': cannot convert argument 1 from 'const char [12]' to 'sf::WindowHandle'
+              C:\Users\Michal\Desktop\MDPCollege\CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1.cpp(6,56):
+              Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or parenthesized function-style cast
+      C:\Users\Michal\Desktop\MDPCollege\CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1\Michal_Becmer_D00256088_CA1.cpp(6,28):
+      while trying to match the argument list '(const char [12])'
+  
