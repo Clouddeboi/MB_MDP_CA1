@@ -2,6 +2,7 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include "input_manager.hpp"
 
 namespace core {
 	class Application {
@@ -15,6 +16,7 @@ namespace core {
 
 	private:
 		sf::RenderWindow window_;
+		InputManager input_manager_;
 		void ProcessEvents();
 		void Update();
 		void Render();
