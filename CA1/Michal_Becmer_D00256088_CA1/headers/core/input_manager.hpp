@@ -22,6 +22,8 @@ namespace core {
 		InputDeviceType device_type;
 		unsigned int device_id;
 		int key_or_button;
+		int axis = -1;
+		int axis_direction = 0;
 	};
 
 	struct ActionMapping {

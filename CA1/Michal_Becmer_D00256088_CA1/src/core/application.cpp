@@ -2,7 +2,10 @@
 #include "../../headers/core/application.hpp"
 #include "../../headers/core/input_manager.hpp"
 
+
 namespace core {
+
+    sf::Clock clock;
 
     Application::Application()
         : window_(sf::VideoMode({ 1280, 720 }), "SFML Game Engine"),
@@ -12,6 +15,7 @@ namespace core {
     Application::~Application() = default;
 
     void Application::Run() {
+        float deltaTime = clock.restart().asSeconds();
 		//Shapes used for debugging input detection
         sf::CircleShape shape(100.f);
         shape.setFillColor(sf::Color::Green);
@@ -39,10 +43,14 @@ namespace core {
                 shape2.setFillColor(sf::Color::White);
             }
 
+            player_.Update(deltaTime, input_manager_);
+
             window_.clear();
 
             window_.draw(shape);
             window_.draw(shape2);
+
+            player_.Render(window_);
 
             window_.display();
         }

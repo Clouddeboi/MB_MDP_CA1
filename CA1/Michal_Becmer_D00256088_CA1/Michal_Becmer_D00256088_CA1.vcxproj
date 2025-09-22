@@ -28,6 +28,7 @@
     <ClCompile Include="src\core\shader_manager.cpp" />
     <ClCompile Include="src\gameplay\bullet.cpp" />
     <ClCompile Include="src\gameplay\camera.cpp" />
+    <ClCompile Include="src\gameplay\entity.cpp" />
     <ClCompile Include="src\gameplay\hud.cpp" />
     <ClCompile Include="src\gameplay\map.cpp" />
     <ClCompile Include="src\gameplay\player.cpp" />
@@ -53,6 +54,7 @@
     <ClInclude Include="headers\core\shader_manager.hpp" />
     <ClInclude Include="headers\gameplay\bullet.hpp" />
     <ClInclude Include="headers\gameplay\camera.hpp" />
+    <ClInclude Include="headers\gameplay\entity.hpp" />
     <ClInclude Include="headers\gameplay\hud.hpp" />
     <ClInclude Include="headers\gameplay\map.hpp" />
     <ClInclude Include="headers\gameplay\player.hpp" />

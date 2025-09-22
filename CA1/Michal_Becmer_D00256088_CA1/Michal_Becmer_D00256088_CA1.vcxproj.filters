@@ -134,6 +134,9 @@
     <ClCompile Include="src\gameplay\weapon.cpp">
       <Filter>Source Files\gameplay</Filter>
     </ClCompile>
+    <ClCompile Include="src\gameplay\entity.cpp">
+      <Filter>Source Files\gameplay</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\core\application.hpp">
@@ -201,6 +204,9 @@
     </ClInclude>
     <ClInclude Include="headers\utils\logger.hpp">
       <Filter>headers\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\gameplay\entity.hpp">
+      <Filter>headers\gameplay</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

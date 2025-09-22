@@ -9,12 +9,24 @@ namespace core {
         action_mappings_.push_back({
             "Jump",
             {
-				//Converts SFML key/button codes to our InputBinding structure(int)
                 { InputDeviceType::Keyboard, 0, static_cast<int>(sf::Keyboard::Key::Space) },
-
-                //Xbox and playstation controllers have different button mappings
-                //For now we will just use the xbox controller mapping
-                { InputDeviceType::Controller, 0, 0 },
+                { InputDeviceType::Controller, 0, 0 }
+            }
+            });
+        action_mappings_.push_back({
+            "Left",
+            {
+                { InputDeviceType::Keyboard, 0, static_cast<int>(sf::Keyboard::Key::A) },
+                { InputDeviceType::Keyboard, 0, static_cast<int>(sf::Keyboard::Key::Left) },
+                { InputDeviceType::Controller, 0, -1, 0, -1 }
+            }
+            });
+        action_mappings_.push_back({
+            "Right",
+            {
+                { InputDeviceType::Keyboard, 0, static_cast<int>(sf::Keyboard::Key::D) },
+                { InputDeviceType::Keyboard, 0, static_cast<int>(sf::Keyboard::Key::Right) },
+                { InputDeviceType::Controller, 0, 0, 0, +1 }
             }
             });
     }
@@ -96,8 +108,15 @@ namespace core {
                         }
                         else if (device_type == InputDeviceType::Controller && binding.device_id == device_id) {
                             if (sf::Joystick::isConnected(device_id)) {
-                                if (sf::Joystick::isButtonPressed(device_id, binding.key_or_button)) {
-                                    return true;
+                                if (binding.axis != -1) {
+                                    float axis_value = sf::Joystick::getAxisPosition(device_id, static_cast<sf::Joystick::Axis>(binding.axis));
+                                    if (binding.axis_direction == -1 && axis_value < -30) return true;
+                                    if (binding.axis_direction == +1 && axis_value > 30) return true;
+                                }
+                                else if (binding.key_or_button >= 0 && binding.key_or_button < sf::Joystick::getButtonCount(device_id)) {
+                                    if (sf::Joystick::isButtonPressed(device_id, binding.key_or_button)) {
+                                        return true;
+                                    }
                                 }
                             }
                         }

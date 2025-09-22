@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "input_manager.hpp"
+#include "../gameplay/player.hpp"
 
 namespace core {
 	class Application {
@@ -17,6 +18,7 @@ namespace core {
 	private:
 		sf::RenderWindow window_;
 		InputManager input_manager_;
+		gameplay::Player player_;;
 		void ProcessEvents();
 		void Update();
 		void Render();
