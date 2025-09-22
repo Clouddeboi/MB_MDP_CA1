@@ -43,6 +43,7 @@ namespace core {
 
 		//Future implementation for handling multiple players
 		bool IsActionPressed(const std::string& action, InputDeviceType device_type, unsigned int device_id = 0) const;
+		const std::vector<PlayerInput>& GetPlayerInputs() const;
 		//float GetAxis(unsigned int player_index, unsigned int axis) const;
 		//void SetPlayerInput(unsigned int player_index, const PlayerInput& input);
 		//unsigned int GetPlayerCount() const;

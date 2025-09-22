@@ -18,7 +18,7 @@ namespace core {
 	private:
 		sf::RenderWindow window_;
 		InputManager input_manager_;
-		gameplay::Player player_;;
+		std::vector<gameplay::Player> players_;
 		void ProcessEvents();
 		void Update();
 		void Render();

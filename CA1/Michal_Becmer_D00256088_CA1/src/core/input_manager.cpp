@@ -96,6 +96,10 @@ namespace core {
         return controller_active_;
     }
 
+    const std::vector<PlayerInput>& InputManager::GetPlayerInputs() const {
+        return player_inputs_;
+    }
+
     bool InputManager::IsActionPressed(const std::string& action, InputDeviceType device_type, unsigned int device_id) const {
         for (const auto& mapping : action_mappings_) {
             if (mapping.action_name == action) {

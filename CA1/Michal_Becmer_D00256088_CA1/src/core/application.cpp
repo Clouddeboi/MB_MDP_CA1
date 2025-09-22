@@ -43,14 +43,27 @@ namespace core {
                 shape2.setFillColor(sf::Color::White);
             }
 
-            player_.Update(deltaTime, input_manager_);
+            if (players_.size() < input_manager_.GetPlayerInputs().size()) {
+                for (size_t i = players_.size(); i < input_manager_.GetPlayerInputs().size(); ++i) {
+                    sf::Vector2f spawnPos = (i == 0) ? sf::Vector2f(400.f, 360.f) : sf::Vector2f(880.f, 360.f);
+                    gameplay::Player player(input_manager_.GetPlayerInputs()[i]);
+                    player.SetColor(i == 0 ? sf::Color::Blue : sf::Color::Red);
+                    players_.push_back(player);
+                }
+            }
+
+            for (auto& player : players_) {
+                player.Update(deltaTime, input_manager_);
+            }
 
             window_.clear();
 
             window_.draw(shape);
             window_.draw(shape2);
 
-            player_.Render(window_);
+            for (auto& player : players_) {
+                player.Render(window_);
+            }
 
             window_.display();
         }
