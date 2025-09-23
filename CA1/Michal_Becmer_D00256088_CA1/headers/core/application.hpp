@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include "input_manager.hpp"
 #include "../gameplay/player.hpp"
+#include "../core/physics_engine.hpp"
 
 namespace core {
 	class Application {
@@ -19,6 +20,7 @@ namespace core {
 		sf::RenderWindow window_;
 		InputManager input_manager_;
 		std::vector<gameplay::Player> players_;
+		core::PhysicsEngine physics_engine_;
 		void ProcessEvents();
 		void Update();
 		void Render();

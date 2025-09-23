@@ -12,7 +12,19 @@ namespace gameplay {
 		void SetPosition(const sf::Vector2f& position) { position_ = position; }
 		sf::Vector2f GetPosition() const { return position_; }
 
+		void SetVelocity(const sf::Vector2f& velocity) { velocity_ = velocity; }
+		sf::Vector2f GetVelocity() const { return velocity_; }
+
+		void SetDynamic(bool isDynamic) { is_dynamic_ = isDynamic; }
+		bool IsDynamic() const { return is_dynamic_; }
+
+		void SetMass(float mass) { mass_ = mass; }
+		float GetMass() const { return mass_; }
+
 	protected:
 		sf::Vector2f position_;
+		sf::Vector2f velocity_{ 0.f, 0.f };
+		bool is_dynamic_{ true };
+		float mass_{ 1.0f };
 	};
 }

@@ -1,10 +1,4 @@
 ﻿  application.cpp
-  input_manager.cpp
-C:\Users\Michal\Desktop\MDPCollege\CA1\Michal_Becmer_D00256088_CA1\MB_MDP_CA1\CA1\Michal_Becmer_D00256088_CA1\src\core\input_manager.cpp(120,94): warning C4018: '<': signed/unsigned mismatch
-  player.cpp
-  main.cpp
-  game_state.cpp
-  Generating Code...
   Michal_Becmer_D00256088_CA1.vcxproj -> C:\Users\Michal\Desktop\MDPCollege\CA1\Michal_Becmer_D00256088_CA1\MB_MDP_CA1\CA1\x64\Debug\Michal_Becmer_D00256088_CA1.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

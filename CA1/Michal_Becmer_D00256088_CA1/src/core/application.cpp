@@ -1,6 +1,7 @@
 //Author: Michal Becmer - D00256088
 #include "../../headers/core/application.hpp"
 #include "../../headers/core/input_manager.hpp"
+#include "../../headers/core/physics_engine.hpp"
 
 
 namespace core {
@@ -10,6 +11,7 @@ namespace core {
     Application::Application()
         : window_(sf::VideoMode({ 1280, 720 }), "SFML Game Engine"),
         input_manager_() {
+        physics_engine_.SetGravity(sf::Vector2f(0.f, 0.0981f));
     }
 
     Application::~Application() = default;
@@ -55,6 +57,13 @@ namespace core {
             for (auto& player : players_) {
                 player.Update(deltaTime, input_manager_);
             }
+
+            std::vector<gameplay::Entity*> entity_ptrs;
+            for (auto& player : players_) {
+                entity_ptrs.push_back(&player);
+            }
+
+            physics_engine_.Update(deltaTime, entity_ptrs);
 
             window_.clear();
 

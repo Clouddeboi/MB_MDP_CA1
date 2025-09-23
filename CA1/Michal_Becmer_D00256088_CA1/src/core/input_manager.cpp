@@ -18,7 +18,8 @@ namespace core {
             {
                 { InputDeviceType::Keyboard, 0, static_cast<int>(sf::Keyboard::Key::A) },
                 { InputDeviceType::Keyboard, 0, static_cast<int>(sf::Keyboard::Key::Left) },
-                { InputDeviceType::Controller, 0, -1, 0, -1 }
+                { InputDeviceType::Controller, 0, -1, 0, -1 },
+                { InputDeviceType::Controller, 0, -1, static_cast<int>(sf::Joystick::Axis::PovX), -1 }
             }
             });
         action_mappings_.push_back({
@@ -26,7 +27,8 @@ namespace core {
             {
                 { InputDeviceType::Keyboard, 0, static_cast<int>(sf::Keyboard::Key::D) },
                 { InputDeviceType::Keyboard, 0, static_cast<int>(sf::Keyboard::Key::Right) },
-                { InputDeviceType::Controller, 0, 0, 0, +1 }
+                { InputDeviceType::Controller, 0, 0, 0, +1 },
+                { InputDeviceType::Controller, 0, 0, static_cast<int>(sf::Joystick::Axis::PovX), +1 }
             }
             });
     }
