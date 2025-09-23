@@ -11,13 +11,11 @@ namespace core {
     Application::Application()
         : window_(sf::VideoMode({ 1280, 720 }), "SFML Game Engine"),
         input_manager_() {
-        physics_engine_.SetGravity(sf::Vector2f(0.f, 0.0981f));
     }
 
     Application::~Application() = default;
 
     void Application::Run() {
-        float deltaTime = clock.restart().asSeconds();
 		//Shapes used for debugging input detection
         sf::CircleShape shape(100.f);
         shape.setFillColor(sf::Color::Green);
@@ -27,6 +25,7 @@ namespace core {
 		shape2.setPosition({1000, 0});
 
         while (window_.isOpen()) {
+            float deltaTime = clock.restart().asSeconds();
             while (const std::optional event = window_.pollEvent()) {
                 if (event->is<sf::Event::Closed>())
                     window_.close();
