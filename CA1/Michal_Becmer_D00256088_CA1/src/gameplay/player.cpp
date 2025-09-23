@@ -2,7 +2,7 @@
 
 namespace gameplay {
     Player::Player(const core::PlayerInput& input):
-        assigned_input_(input), shape_(sf::Vector2f(50.0f, 50.0f)), color_(sf::Color::Green), speed_(0.1f), health_(100) {
+        assigned_input_(input), shape_(sf::Vector2f(50.0f, 50.0f)), color_(sf::Color::Green), speed_(0.75f), health_(100) {
         shape_.setFillColor(color_);
         shape_.setOrigin(sf::Vector2f(25.f, 25.f));
         position_ = sf::Vector2f(640.f, 360.f);
