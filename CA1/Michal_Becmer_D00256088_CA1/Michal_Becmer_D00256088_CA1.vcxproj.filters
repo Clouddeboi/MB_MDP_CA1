@@ -137,6 +137,9 @@
     <ClCompile Include="src\gameplay\entity.cpp">
       <Filter>Source Files\gameplay</Filter>
     </ClCompile>
+    <ClCompile Include="src\gameplay\world_manager.cpp">
+      <Filter>Source Files\gameplay</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\core\application.hpp">
@@ -206,6 +209,12 @@
       <Filter>headers\utils</Filter>
     </ClInclude>
     <ClInclude Include="headers\gameplay\entity.hpp">
+      <Filter>headers\gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\gameplay\platform.hpp">
+      <Filter>headers\gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\gameplay\world_manager.hpp">
       <Filter>headers\gameplay</Filter>
     </ClInclude>
   </ItemGroup>

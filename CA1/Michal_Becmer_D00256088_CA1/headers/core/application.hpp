@@ -5,6 +5,7 @@
 #include "input_manager.hpp"
 #include "../gameplay/player.hpp"
 #include "../core/physics_engine.hpp"
+#include "../gameplay/world_manager.hpp"
 
 namespace core {
 	class Application {
@@ -21,6 +22,7 @@ namespace core {
 		InputManager input_manager_;
 		std::vector<gameplay::Player> players_;
 		core::PhysicsEngine physics_engine_;
+		gameplay::WorldManager world_manager_;
 		void ProcessEvents();
 		void Update();
 		void Render();

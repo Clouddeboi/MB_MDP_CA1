@@ -34,6 +34,7 @@
     <ClCompile Include="src\gameplay\player.cpp" />
     <ClCompile Include="src\gameplay\power_up.cpp" />
     <ClCompile Include="src\gameplay\weapon.cpp" />
+    <ClCompile Include="src\gameplay\world_manager.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\states\game_over_state.cpp" />
     <ClCompile Include="src\states\game_state.cpp" />
@@ -57,9 +58,11 @@
     <ClInclude Include="headers\gameplay\entity.hpp" />
     <ClInclude Include="headers\gameplay\hud.hpp" />
     <ClInclude Include="headers\gameplay\map.hpp" />
+    <ClInclude Include="headers\gameplay\platform.hpp" />
     <ClInclude Include="headers\gameplay\player.hpp" />
     <ClInclude Include="headers\gameplay\power_up.hpp" />
     <ClInclude Include="headers\gameplay\weapon.hpp" />
+    <ClInclude Include="headers\gameplay\world_manager.hpp" />
     <ClInclude Include="headers\states\game_over_state.hpp" />
     <ClInclude Include="headers\states\game_state.hpp" />
     <ClInclude Include="headers\states\menu_state.hpp" />
