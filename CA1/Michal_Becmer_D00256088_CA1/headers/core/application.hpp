@@ -24,7 +24,7 @@ namespace core {
 		core::PhysicsEngine physics_engine_;
 		gameplay::WorldManager world_manager_;
 		void ProcessEvents();
-		void Update();
+		void Update(float deltaTime);
 		void Render();
 	};
 }
