@@ -54,31 +54,32 @@ namespace gameplay {
         return count;
     }
 
+	//We let each entity handle its own collision response
+	//This just uses AABB to detect collisions and calculate overlap
     void WorldManager::HandleCollisions() {
-        for (const auto& entityA : entities_) {
-            Player* player = dynamic_cast<Player*>(entityA.get());
-            if (!player) continue;
+        for (size_t i = 0; i < entities_.size(); ++i) {
+            for (size_t j = i + 1; j < entities_.size(); ++j) {
+                auto& a = *entities_[i];
+                auto& b = *entities_[j];
 
-            sf::FloatRect playerBounds = player->GetBounds();
+                if (Entity::CheckCollision(a, b)) {
+                    sf::FloatRect boundsA = a.GetBounds();
+                    sf::FloatRect boundsB = b.GetBounds();
 
-            for (const auto& entityB : entities_) {
-                Platform* platform = dynamic_cast<Platform*>(entityB.get());
-                if (!platform) continue;
+                    sf::Vector2f overlapPos(
+                        std::max(boundsA.position.x, boundsB.position.x),
+                        std::max(boundsA.position.y, boundsB.position.y)
+                    );
+                    sf::Vector2f overlapSize(
+                        std::min(boundsA.position.x + boundsA.size.x, boundsB.position.x + boundsB.size.x) - overlapPos.x,
+                        std::min(boundsA.position.y + boundsA.size.y, boundsB.position.y + boundsB.size.y) - overlapPos.y
+                    );
+                    sf::FloatRect overlap(overlapPos, overlapSize);
 
-                sf::FloatRect platformBounds = platform->GetBounds();
-
-                auto overlap = playerBounds.findIntersection(platformBounds);
-
-                if (overlap) {
-                    sf::Vector2f playerPos = player->GetPosition();
-                    playerPos.y = platformBounds.position.y - playerBounds.size.y / 2.f;
-                    player->SetPosition(playerPos);
-
-                    sf::Vector2f velocity = player->GetVelocity();
-                    if (velocity.y > 0) velocity.y = 0;
-                    player->SetVelocity(velocity);
-
-                    playerBounds = player->GetBounds();
+                    if (overlap.size.x > 0 && overlap.size.y > 0) {
+                        a.OnCollision(b, overlap);
+                        b.OnCollision(a, overlap);
+                    }
                 }
             }
         }

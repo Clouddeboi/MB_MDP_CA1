@@ -22,6 +22,18 @@ namespace gameplay {
 		float GetMass() const { return mass_; }
 		virtual sf::FloatRect GetBounds() const = 0;
 
+		virtual void OnCollision(Entity& other, const sf::FloatRect& overlap) {}
+
+		static bool CheckCollision(const Entity& a, const Entity& b) {
+			const sf::FloatRect boundsA = a.GetBounds();
+			const sf::FloatRect boundsB = b.GetBounds();
+			//Manual AABB check
+			return (boundsA.position.x < boundsB.position.x + boundsB.size.x) &&
+				(boundsA.position.x + boundsA.size.x > boundsB.position.x) &&
+				(boundsA.position.y < boundsB.position.y + boundsB.size.y) &&
+				(boundsA.position.y + boundsA.size.y > boundsB.position.y);
+		}
+
 	protected:
 		sf::Vector2f position_;
 		sf::Vector2f velocity_{ 0.f, 0.f };

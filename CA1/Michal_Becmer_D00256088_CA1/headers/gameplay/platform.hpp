@@ -24,6 +24,8 @@ namespace gameplay {
             return shape_.getGlobalBounds();
         }
 
+        void OnCollision(Entity& other, const sf::FloatRect& overlap) {};
+
     private:
         sf::RectangleShape shape_;
     };

@@ -46,4 +46,19 @@ namespace gameplay {
     sf::FloatRect Player::GetBounds() const {
         return shape_.getGlobalBounds();
     }
+
+    void Player::OnCollision(Entity& other, const sf::FloatRect& overlap) {
+        Platform* platform = dynamic_cast<Platform*>(&other);
+        if (platform) {
+            sf::FloatRect platformBounds = platform->GetBounds();
+            sf::FloatRect playerBounds = GetBounds();
+            sf::Vector2f playerPos = GetPosition();
+            playerPos.y = platformBounds.position.y - playerBounds.size.y / 2.f;
+            SetPosition(playerPos);
+
+            sf::Vector2f velocity = GetVelocity();
+            if (velocity.y > 0) velocity.y = 0;
+            SetVelocity(velocity);
+        }
+    }
 }

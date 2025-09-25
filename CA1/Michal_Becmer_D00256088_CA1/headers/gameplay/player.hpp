@@ -2,6 +2,7 @@
 
 #include "entity.hpp"
 #include "../core/input_manager.hpp"
+#include "../gameplay/platform.hpp"
 #include <SFML/Graphics.hpp>
 
 namespace gameplay {
@@ -16,6 +17,8 @@ namespace gameplay {
 		void SetColor(const sf::Color& color);
 
 		sf::FloatRect GetBounds() const override;
+
+		void OnCollision(Entity& other, const sf::FloatRect& overlap) override;
 
 	private:
 		core::PlayerInput assigned_input_;
