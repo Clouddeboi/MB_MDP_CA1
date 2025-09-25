@@ -15,6 +15,8 @@ namespace gameplay {
 
 		void SetColor(const sf::Color& color);
 
+		sf::FloatRect GetBounds() const override;
+
 	private:
 		core::PlayerInput assigned_input_;
 		sf::RectangleShape shape_;

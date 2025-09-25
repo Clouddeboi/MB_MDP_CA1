@@ -20,6 +20,7 @@ namespace gameplay {
 
 		void SetMass(float mass) { mass_ = mass; }
 		float GetMass() const { return mass_; }
+		virtual sf::FloatRect GetBounds() const = 0;
 
 	protected:
 		sf::Vector2f position_;

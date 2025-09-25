@@ -34,6 +34,8 @@ namespace gameplay {
             }
         }
         physics_engine_.Update(deltaTime, dynamic_entities);
+
+        HandleCollisions();
     }
 
     void WorldManager::Render(sf::RenderWindow& window) {
@@ -51,4 +53,35 @@ namespace gameplay {
         }
         return count;
     }
+
+    void WorldManager::HandleCollisions() {
+        for (const auto& entityA : entities_) {
+            Player* player = dynamic_cast<Player*>(entityA.get());
+            if (!player) continue;
+
+            sf::FloatRect playerBounds = player->GetBounds();
+
+            for (const auto& entityB : entities_) {
+                Platform* platform = dynamic_cast<Platform*>(entityB.get());
+                if (!platform) continue;
+
+                sf::FloatRect platformBounds = platform->GetBounds();
+
+                auto overlap = playerBounds.findIntersection(platformBounds);
+
+                if (overlap) {
+                    sf::Vector2f playerPos = player->GetPosition();
+                    playerPos.y = platformBounds.position.y - playerBounds.size.y / 2.f;
+                    player->SetPosition(playerPos);
+
+                    sf::Vector2f velocity = player->GetVelocity();
+                    if (velocity.y > 0) velocity.y = 0;
+                    player->SetVelocity(velocity);
+
+                    playerBounds = player->GetBounds();
+                }
+            }
+        }
+    }
+
 }

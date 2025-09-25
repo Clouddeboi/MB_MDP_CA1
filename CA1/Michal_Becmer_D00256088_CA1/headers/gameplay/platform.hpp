@@ -18,6 +18,10 @@ namespace gameplay {
         void Render(sf::RenderWindow& window) override {
             shape_.setPosition(position_);
             window.draw(shape_);
+        } 
+
+        sf::FloatRect GetBounds() const override {
+            return shape_.getGlobalBounds();
         }
 
     private:

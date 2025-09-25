@@ -42,4 +42,8 @@ namespace gameplay {
     void Player::SetColor(const sf::Color& color) {
         color_ = color;
     }
+
+    sf::FloatRect Player::GetBounds() const {
+        return shape_.getGlobalBounds();
+    }
 }

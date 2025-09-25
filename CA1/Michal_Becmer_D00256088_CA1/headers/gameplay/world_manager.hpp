@@ -6,6 +6,8 @@
 #include "../gameplay/platform.hpp"
 #include "../core/input_manager.hpp"
 #include "../core/physics_engine.hpp"
+#include <SFML/Graphics.hpp>
+#include <SFML/Graphics/Rect.hpp>
 
 namespace gameplay {
     class WorldManager {
@@ -20,6 +22,8 @@ namespace gameplay {
 
         const std::vector<std::unique_ptr<Entity>>& GetEntities() const { return entities_; }
         size_t GetPlayerCount() const;
+
+        void HandleCollisions();
 
     private:
         std::vector<std::unique_ptr<Entity>> entities_;
